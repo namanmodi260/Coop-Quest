@@ -3014,7 +3014,7 @@ These environment variables (JWT_SECRET and JWT_EXPIRES_IN) are read from the sy
 
 authController.js
 
-```js
+```jsf
 import { createJWT } from '../utils/tokenUtils.js';
 
 const token = createJWT({ userId: user._id, role: user.role });
@@ -5426,7 +5426,7 @@ const StatsContainer = ({ defaultStats }) => {
 export default StatsContainer;
 ```
 
-#### ChartsContainer
+#### ChartsContainerf
 
 ```js
 import { useState } from 'react';
