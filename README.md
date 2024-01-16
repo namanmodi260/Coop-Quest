@@ -3,7 +3,7 @@ Welcome to Coop-Quest, a job interview management web application developed and 
 ## Project Details
 
 - **Project Name:** Coop-Quest
-- **Live Demo:** [Coop-Quest](https://coop-quest.onrender.com/)
+- **Live Demo:** [Coop-Quest](https://coop-quest.onrender.com/)   (Takes about 15 seconds to load)
 - **Technology Stack:** React, Node.js, Express.js, MongoDB
 - **Completion Date:** July 2023
 
