@@ -34,6 +34,21 @@ const Wrapper = styled.nav`
     display: flex;
     align-items: center;
   }
+   .cal-btn{
+    margin-left : 0.5rem;
+  }
+  .add-btn{
+    margin-right: 0.5rem;
+
+  }
+  .disabled{
+  pointer-events: none;
+  cursor: not-allowed;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  }
   @media (min-width: 992px) {
     position: sticky;
     top: 0;

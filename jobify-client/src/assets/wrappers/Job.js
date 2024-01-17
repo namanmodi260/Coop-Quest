@@ -67,7 +67,8 @@ const Wrapper = styled.article`
     align-items: center;
   }
   .edit-btn,
-  .delete-btn {
+  .delete-btn,
+  .cal-btn{
     height: 30px;
     font-size: 0.85rem;
     display: flex;
@@ -75,6 +76,21 @@ const Wrapper = styled.article`
   }
   .edit-btn {
     margin-right: 0.5rem;
+  }
+  .cal-btn{
+    margin-left : 0.5rem;
+  }
+  .add-btn{
+    margin-right: 0.5rem;
+
+  }
+  .disabled{
+  pointer-events: none;
+  cursor: not-allowed;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  box-shadow: none;
   }
 `;
 

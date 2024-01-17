@@ -39,7 +39,7 @@ const Wrapper = styled.section`
   }
   @media (min-width: 992px) {
     .page {
-      grid-template-columns: 1fr 400px;
+      grid-template-columns: 1fr 550px;
       column-gap: 3rem;
     }
     .main-img {

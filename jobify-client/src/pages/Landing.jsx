@@ -1,15 +1,15 @@
 import styled from 'styled-components';
 import Wrapper from '../assets/wrappers/LandingPage';
-import main from '../assets/images/main.svg';
+import main from '../assets/images/logo3-removebg.png';
 import { Link } from 'react-router-dom';
 import logo from '../assets/images/logo.svg';
-import { Logo } from '../components';
+import { NewLogo } from '../components';
 
 const Landing = () => {
   return (
     <Wrapper>
       <nav>
-        <Logo />
+        {/* <NewLogo /> */}
       </nav>
       <div className="container page">
         {/* info */}
@@ -18,10 +18,7 @@ const Landing = () => {
             job <span>tracking</span> app
           </h1>
           <p>
-            I'm baby wayfarers hoodie next level taiyaki brooklyn cliche blue
-            bottle single-origin coffee chia. Aesthetic post-ironic venmo,
-            quinoa lo-fi tote bag adaptogen everyday carry meggings +1 brunch
-            narwhal.
+           Coop-Quest : Elevate your job search with our intuitive platform. Effortlessly manage applications, track statuses, and stay organized. Your personalized career journey begins here!
           </p>
           <Link to="/register" className="btn register-link">
             Register
@@ -29,8 +26,9 @@ const Landing = () => {
           <Link to="/login" className="btn">
             Login / Demo User
           </Link>
+        
         </div>
-        <img src={main} alt="job hunt" className="img main-img" />
+        <img src={main} alt="job hunt" className="img main-img" style={{width:"650px"}} />
       </div>
     </Wrapper>
   );

@@ -22,6 +22,7 @@ const DashboardLayout = () => {
 
   const [showSidebar, setShowSidebar] = useState(false);
   const [isDarkTheme, setIsDarkTheme] = useState(false);
+  const [isAuthorized, setIsAuthorized] = useState(false);
 
   const toggleDarkTheme = () => {
     const newDarkTheme = !isDarkTheme;
@@ -34,6 +35,9 @@ const DashboardLayout = () => {
     setShowSidebar(!showSidebar);
   };
 
+  const toggleAuthorized = () => {
+    setIsAuthorized(!isAuthorized);
+  };
   const logoutUser = async () => {
     navigate('/');
     await customFetch.get('/auth/logout');
@@ -45,6 +49,8 @@ const DashboardLayout = () => {
         user,
         showSidebar,
         isDarkTheme,
+        isAuthorized,
+        toggleAuthorized,
         toggleDarkTheme,
         toggleSidebar,
         logoutUser,
@@ -56,7 +62,7 @@ const DashboardLayout = () => {
           <div>
             <Navbar />
             <div className="dashboard-page">
-              <Outlet context={{ user }} />
+              <Outlet context={{ user,isAuthorized }} />
             </div>
           </div>
         </main>
