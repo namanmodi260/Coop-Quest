@@ -4,16 +4,72 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jobify</title>
-    <script type="module" crossorigin src="/assets/index-af40cc31.js"></script>
-       <script async defer src="https://apis.google.com/js/api.js" onload="gapiLoaded()"></script>
-
-    <!-- Load Google Identity Services -->
-    <script async defer src="https://accounts.google.com/gsi/client" onload="gisLoaded()"></script>
+    <title>Coop-Quest</title>
+    <script type="module" crossorigin src="/assets/index-959bc830.js"></script>
     <link rel="stylesheet" href="/assets/index-6818b610.css">
   </head>
   <body>
     <div id="root"></div>
     
+
+
+     <script>
+
+      const CLIENT_ID = '1092382803013-dr211t3477r9qjtq4hkq59v7v0bf6mrh.apps.googleusercontent.com';
+const API_KEY = 'AIzaSyCCiqvUpoMctwSHEFIAMZD6d1wRNFg4MkM';
+
+// Discovery doc URL for APIs used by the quickstart
+const DISCOVERY_DOC = 'https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest';
+
+// Authorization scopes required by the API; multiple scopes can be
+// included, separated by spaces.
+const SCOPES = 'https://www.googleapis.com/auth/calendar.readonly https://www.googleapis.com/auth/calendar';
+
+let tokenClient;
+let gapiInited = false;
+let gisInited = false;
+
+
+// Define your functions here
+window.initializeGapiClient = async function() {
+  // Your code here
+
+      await gapi.client.init({
+        apiKey: API_KEY,
+        discoveryDocs: [DISCOVERY_DOC],
+      });
+      gapiInited = true;
+      maybeEnableButtons();
+    }
+
+
+window.maybeEnableButtons = function() {
+  // Your code here
+    if (gapiInited && gisInited) {
+       
+      }
+}
+
+// Callback after api.js is loaded.
+window.gapiLoaded = function() {
+  gapi.load('client', initializeGapiClient);
+}
+
+window.gisLoaded = function(){
+  tokenClient = google.accounts.oauth2.initTokenClient({
+    client_id: CLIENT_ID,
+    scope: SCOPES,
+    callback: '', // defined later
+  });
+  gisInited = true;
+  maybeEnableButtons();
+}
+</script>
+
+<script async defer src="https://apis.google.com/js/api.js" onload="gapiLoaded()"></script>
+
+<!-- Load Google Identity Services -->
+<script async defer src="https://accounts.google.com/gsi/client" onload="gisLoaded()"></script>
+
   </body>
 </html>
