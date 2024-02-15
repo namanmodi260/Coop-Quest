@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "setup-project": "npm i && cd jobify-client && npm i",
-    "setup-prod": "npm i && cd client && npm i && npm run build",
+    "setup-prod": "npm i && cd jobify-client && npm i && npm run build",
     "server": "nodemon server",
     "client": "cd jobify-client && npm run dev",
     "dev": "concurrently --kill-others-on-fail \" npm run server\" \" npm run client\""
